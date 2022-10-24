@@ -3,9 +3,6 @@ package stepDefinitions;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import pages.AmazonPage;
 import utilities.ConfigReader;
 import utilities.Driver;
@@ -33,7 +30,6 @@ public class AmazonStepDefinitions {
     }
     @Then("Click Buy Now")
     public void click_buy_now() {
-        WebElement buyNow = amazonPage.buyNow;
         Driver.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
         if (amazonPage.addWishList.isDisplayed()){
             amazonPage.addWishList.click();
