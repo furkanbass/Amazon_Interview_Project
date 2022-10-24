@@ -6,11 +6,14 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-       plugin = {"html:target/html-reports/cucumber-reports.html"},
+        monochrome = true,
+        plugin = {
+                "pretty",
+                "html:target/html-reports/cucumber-reports.html"},
         features = "src/test/resources/features",
-        glue = "stepDefinitions",
-        tags = "@tc01",
+        glue = {"stepDefinitions"},
+        tags = "@grid_feature",
         dryRun = false
 )
-public class TestRunner{
+public class GridRunner{
 }

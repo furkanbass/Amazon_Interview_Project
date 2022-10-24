@@ -1,4 +1,6 @@
+@amazon_kindle
 Feature: Amazon Kindle
+  @tc01
   Scenario: Amazon Kindle TC01
     Given Go to amazon.ca
     Then Click on hamburger menu (top left corner)

@@ -50,6 +50,6 @@ public class AmazonStepDefinitions {
     }
     @Then("Close the browser")
     public void close_the_browser() {
-
+        Driver.closeDriver();
     }
 }
